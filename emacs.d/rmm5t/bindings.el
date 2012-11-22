@@ -44,7 +44,7 @@
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
 (global-set-key (kbd "M-o") 'other-window) ; was facemenu-keymap
 
-(global-set-key (kbd "M-O") 'rotate-windows)
+;; (global-set-key (kbd "M-O") 'rotate-windows)
 
 ;; Replace dired's M-o
 (add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-o") 'other-window))) ; was dired-omit-mode
