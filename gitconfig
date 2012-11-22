@@ -1,6 +1,6 @@
 [user]
-	email = paulfstr@gmail.com
-	name = Paul Foster
+  email = paulfstr@gmail.com
+  name = Paul Foster
 [alias]
   co = checkout
   st = status
@@ -22,11 +22,11 @@
 [remote "origin"]
   push = HEAD
 [github]
-	user = pf981
+  user = pf981
 [diff]
   ignoresubmodules = untracked
 [core]
-	excludesfile = /Users/pf981/.dotfiles/.gitignore
-	editor = emacs
+  excludesfile = /Users/paulfoster/.dotfiles/gitignore
+  editor = emacs
 [heroku]
   account = personal

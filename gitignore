@@ -7,3 +7,5 @@ public/assets
 .rbenv-gemsets
 .rake_t_cache
 .powenv#
+gitconfig
+*#*
