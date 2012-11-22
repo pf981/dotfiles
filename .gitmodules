@@ -13,6 +13,7 @@
 [submodule "emacs.d/vendor/textile-mode"]
   path = emacs.d/vendor/textile-mode
   url = git://github.com/emacsmirror/textile-mode.git
+  ignore = dirty
 [submodule "emacs.d/vendor/filladapt"]
   path = emacs.d/vendor/filladapt
   url = git://github.com/emacsmirror/filladapt.git
