@@ -19,12 +19,12 @@ hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
 
 # monitor activity
-defmonitor on
-activity "<%n>"
-silencewait 15
-bell_msg "DING! (%n)"
-vbell_msg "DING! (%n)"
-vbell on
+#defmonitor on
+#activity "<%n>"
+#silencewait 15
+#bell_msg "DING! (%n)"
+#vbell_msg "DING! (%n)"
+#vbell on
 
 # scrollbars
 termcapinfo xterm* ti@:te@
