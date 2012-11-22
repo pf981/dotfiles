@@ -6,7 +6,4 @@ vendor/ruby
 public/assets
 .rbenv-gemsets
 .rake_t_cache
-.powenv
-\#*
-.\#*
-*#
+.powenv#
