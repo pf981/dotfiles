@@ -15,7 +15,8 @@ defscrollback 30000
 altscreen on
 
 # status line
-hardstatus alwayslastline "%{=b}%{b}%w"
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
 
 # monitor activity
 defmonitor on
@@ -30,3 +31,9 @@ termcapinfo xterm* ti@:te@
 
 # fix backspace
 termcapinfo xterm* 'bc@:bs@'
+
+# Make the backtick the escape
+escape ``
+
+# Make  it so C-x doesn't freeze screen
+defflow off
