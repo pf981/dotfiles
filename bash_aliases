@@ -192,7 +192,8 @@ alias repair-mongo="rm /usr/local/var/mongodb/mongod.lock && mongod --repair"
 ## Miscellaneous
 ############################################################
 
-alias e='emacsclient'
+# alias e='emacsclient'
+alias e='emacs -nw' # FIXME: This is a temporary fix until we get emacsclient working
 alias upgrade_emacs='brew uninstall emacs && brew install emacs --HEAD --use-git-head --srgb --cocoa'
 
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
