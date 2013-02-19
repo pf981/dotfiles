@@ -79,15 +79,31 @@ fi
 ## Terminal behavior
 ############################################################
 
-# Change the window title of X terminals
-case $TERM in
-  xterm*|rxvt|Eterm|eterm)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
-    ;;
-  screen)
-    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
-    ;;
-esac
+# Set window titles for screens
+stty ixany
+stty ixoff -ixon
+#if [ "$TERM" = "screen" ]; then
+  screen_set_window_title () {
+    local HPWD="$PWD"
+    case $HPWD in
+      $HOME) HPWD="~";;
+      $HOME/*) HPWD="~${HPWD#$HOME}";;
+    esac
+    printf '\ek%s\e\\' "$HPWD"
+  }
+
+# Text color variables for prompt command colors
+txtred="\[\033[31m\]"    # Red
+txtgrn="\[\033[32m\]"    # Green
+txtylw="\[\033[33m\]"    # Yellow
+txtpur="\[\033[35m\]"    # Purple
+txtcyn="\[\033[36m\]"    # Cyan
+txtrst="\[\033[0m\]"     # Text reset
+
+# Set colorful prompt command with return value information
+# Prompt will look like: ~[0] paulfoster@Pauls-MacBook-Pro:/Users/paulfoster
+# FIXME: This does not work when not in screen for some reason
+export PROMPT_COMMAND="export retval=\$?; if (( \$retval )) ; then PS1=\"[$txtred\$retval${txtrst}] ${txtcyn}\u${txtrst}@${txtpur}\h${txtrst}:${txtylw}\$PWD${txtrst}\n$ \"; else PS1=\"[$txtgrn\$retval${txtrst}] ${txtcyn}\u${txtrst}@${txtpur}\h${txtrst}:${txtylw}\$PWD${txtrst}\n$ \"; fi; screen_set_window_title;"
 
 # Show the git branch and dirty state in the prompt.
 # Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
