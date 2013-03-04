@@ -189,6 +189,13 @@ alias tl='tail -f log/development.log'
 alias repair-mongo="rm /usr/local/var/mongodb/mongod.lock && mongod --repair"
 
 ############################################################
+## SSH
+############################################################
+alias banshee='ssh -X pf981@banshee.cs.uow.edu.au'
+alias banshee2='ssh -X pfoster@banshee.cs.uow.edu.au' # Staff Account
+alias sdunster='ssh -X pf981@sdunster.com'
+
+############################################################
 ## Miscellaneous
 ############################################################
 
