@@ -2,9 +2,9 @@
 ;; Filename: fixme-mode.el
 ;; Description: Makes source code warnings (FIXME, TODO, etc.) stand out
 ;; in a big way.
-;; Author: Bryan Waite, based on some code found at 
+;; Author: Bryan Waite, based on some code found at
 ;; http://c2.com/cgi/wiki?FixmeComment
-;; Copyright (C) 2009, Bryan Waite 
+;; Copyright (C) 2009, Bryan Waite
 ;; License: MIT License (not reproduced for space reasons)
 ;; Compatibility: Only tested under Emacs 23 CVS.
 
@@ -30,7 +30,7 @@
   "Words to highlight"
   :group 'fixme-mode)
 
-(defvar fixme-keyword-re-string "" 
+(defvar fixme-keyword-re-string ""
   "The regular expression to use for searching for fixme words. Generated with fixme-register-keyword-re")
 
 (defvar fixme-keyword-font-lock '()
@@ -92,7 +92,7 @@ to update the font-lock and searching variables"
   (fixme-register-keywords)
   )
 
-(define-minor-mode fixme-mode  
+(define-minor-mode fixme-mode
   "A minor mode for making FIXME and other warnings stand out"
   nil
   " Fixme"
@@ -105,3 +105,4 @@ to update the font-lock and searching variables"
   )
 
 (provide 'fixme-mode)
+(fixme-mode 1) ;; Enable fixme-mode by default
