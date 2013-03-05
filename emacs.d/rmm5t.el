@@ -64,6 +64,7 @@
 (vendor 'bundler       'bundle-open 'bundle-console 'bundle-install 'bundle-update 'bundle-check)
 (vendor 'browse-kill-ring+ 'browse-kill-ring)
 (vendor 'browse-kill-ring  'NEVERLOAD-browse-kill-ring)
+(vendor 'fixme-mode)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)
