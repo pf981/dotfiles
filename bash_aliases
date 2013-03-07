@@ -23,7 +23,7 @@ else
   # For LS_COLORS template: $ dircolors /etc/DIR_COLORS
 fi
 
-alias l="ls"
+# alias l="ls" # Disabled for bashmarks
 alias ll="ls -lh"
 alias la="ls -a"
 alias lal="ls -alh"
@@ -32,7 +32,7 @@ alias lal="ls -alh"
 ## Git
 ############################################################
 
-alias g="git"
+# alias g="git" # Disabled for bashmarks
 alias gb="git branch -a -v"
 alias gc="git commit -v"
 alias gca="git commit -v -a"

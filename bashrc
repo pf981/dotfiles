@@ -102,7 +102,6 @@ txtrst="\[\033[0m\]"     # Text reset
 
 # Set colorful prompt command with return value information
 # Prompt will look like: ~[0] paulfoster@Pauls-MacBook-Pro:/Users/paulfoster
-# FIXME: This does not work when not in screen for some reason
 export PROMPT_COMMAND="export retval=\$?; if (( \$retval )) ; then PS1=\"[$txtred\$retval${txtrst}] ${txtcyn}\u${txtrst}@${txtpur}\h${txtrst}:${txtylw}\$PWD${txtrst}\n$ \"; else PS1=\"[$txtgrn\$retval${txtrst}] ${txtcyn}\u${txtrst}@${txtpur}\h${txtrst}:${txtylw}\$PWD${txtrst}\n$ \"; fi; screen_set_window_title;"
 
 # Show the git branch and dirty state in the prompt.
@@ -211,4 +210,12 @@ fi
 if [[ "$USER" == '' ]]; then
   # mainly for cygwin terminals. set USER env var if not already set
   USER=$USERNAME
+fi
+
+############################################################
+## Bashmarks
+############################################################
+
+if [ -e ~/.local/bin/bashmarks.sh ] ; then
+  . ~/.local/bin/bashmarks.sh
 fi
