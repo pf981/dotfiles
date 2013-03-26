@@ -90,3 +90,6 @@
 
 ;; Tags
 (global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue
+
+;; Tags
+(global-set-key (kbd "C-c c") 'uncomment-region) ; was tags-loop-continue
