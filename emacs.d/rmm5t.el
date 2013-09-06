@@ -65,6 +65,9 @@
 (vendor 'browse-kill-ring+ 'browse-kill-ring)
 (vendor 'browse-kill-ring  'NEVERLOAD-browse-kill-ring)
 (vendor 'fixme-mode)
+(vendor 'cweb-mode 'cweb-mode) ;; FIXME: This doesn't work
 
+
+;;(setq auto-mode-alist (cons '("\\.w" . cweb-mode) auto-mode-alist)) ;; FIXME: Remove
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)

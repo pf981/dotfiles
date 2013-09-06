@@ -93,3 +93,7 @@
 
 ;; Tags
 (global-set-key (kbd "C-c c") 'uncomment-region) ; was tags-loop-continue
+
+;; Scroll buffer by one line
+(global-set-key (kbd "M-p") 'scroll-down-line)
+(global-set-key (kbd "M-n") 'scroll-up-line)
