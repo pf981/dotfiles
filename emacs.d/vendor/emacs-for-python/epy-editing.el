@@ -14,7 +14,7 @@
 ;; Auto Completion
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories
-	     (concat epy-install-dir "auto-complete/ac-dict"))
+       (concat epy-install-dir "auto-complete/ac-dict"))
 (ac-config-default)
 
 (when epy-load-yasnippet-p
@@ -27,7 +27,7 @@
     "Load django snippets"
     (interactive)
     (and epy-load-yasnippet-p
-	 (yas/load-directory (concat epy-install-dir "snippets/django"))))
+   (yas/load-directory (concat epy-install-dir "snippets/django"))))
 
   (yas/initialize)
   (yas/load-directory (concat epy-install-dir "extensions/yasnippet/snippets"))
@@ -55,7 +55,7 @@ original" (interactive)
 (global-set-key (kbd "C-c y") 'djcb-duplicate-line)
 
 ;; duplicate a line and comment the first
-(global-set-key (kbd "C-c c")(lambda()(interactive)(djcb-duplicate-line t)))
+;; (global-set-key (kbd "C-c c")(lambda()(interactive)(djcb-duplicate-line t)))
 
 ;; Mark whole line
 (defun mark-line (&optional arg)
@@ -110,11 +110,11 @@ original" (interactive)
   (interactive)
   (let (start end bds)
     (if (and transient-mark-mode
-	   mark-active)
-	(setq start (region-beginning) end (region-end))
+     mark-active)
+  (setq start (region-beginning) end (region-end))
       (progn
-	(setq bds (bounds-of-thing-at-point 'line))
-	(setq start (car bds) end (cdr bds))))
+  (setq bds (bounds-of-thing-at-point 'line))
+  (setq start (car bds) end (cdr bds))))
   (python-indent-shift-left start end))
   (setq deactivate-mark nil)
 )
@@ -123,11 +123,11 @@ original" (interactive)
   (interactive)
   (let (start end bds)
     (if (and transient-mark-mode
-	   mark-active)
-	(setq start (region-beginning) end (region-end))
+     mark-active)
+  (setq start (region-beginning) end (region-end))
       (progn
-	(setq bds (bounds-of-thing-at-point 'line))
-	(setq start (car bds) end (cdr bds))))
+  (setq bds (bounds-of-thing-at-point 'line))
+  (setq start (car bds) end (cdr bds))))
   (python-indent-shift-right start end))
   (setq deactivate-mark nil)
 )
@@ -148,14 +148,14 @@ original" (interactive)
 (global-set-key (kbd "M-<down>") 'move-text-down)
 
 (add-hook 'python-mode-hook
-	  (lambda ()
-	    (define-key python-mode-map (kbd "M-<right>")
-	      'balle-python-shift-right)
-	    (define-key python-mode-map (kbd "M-<left>")
-	      'balle-python-shift-left)
-	    (define-key python-mode-map (kbd "C-c C-b") 
-	      'python-shell-send-block))
-	  )
+    (lambda ()
+      (define-key python-mode-map (kbd "M-<right>")
+        'balle-python-shift-right)
+      (define-key python-mode-map (kbd "M-<left>")
+        'balle-python-shift-left)
+      (define-key python-mode-map (kbd "C-c C-b")
+        'python-shell-send-block))
+    )
 
 
 
