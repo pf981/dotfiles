@@ -67,6 +67,7 @@
 (vendor 'browse-kill-ring  'NEVERLOAD-browse-kill-ring)
 (vendor 'fixme-mode)
 (vendor 'cweb-mode 'cweb-mode) ;; FIXME: This doesn't work
+(vendor 'emacs-for-python)
 
 
 ;;(setq auto-mode-alist (cons '("\\.w" . cweb-mode) auto-mode-alist)) ;; FIXME: Remove
