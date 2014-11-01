@@ -26,6 +26,8 @@ conditionally_prefix_path /usr/local/heroku/bin
 conditionally_prefix_path /usr/texbin
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
+conditionally_prefix_path ~/android/sdk-tool # For android command
+conditionally_prefix_path ~/.pyenv/shims
 
 PATH=.:./bin:${PATH}
 
@@ -219,3 +221,16 @@ fi
 if [ -e ~/.local/bin/bashmarks.sh ] ; then
   . ~/.local/bin/bashmarks.sh
 fi
+
+############################################################
+## EXPORTED VARIABLES
+############################################################
+
+export ANDROID_NDK=/Users/paulfoster/android/android-ndk-r8e
+export ANDROID_HOME=~/android/sdk
+export ANDROID_SDK_ROOT=~/android/sdk
+export PATH=~/android/sdk/tools:~/android/sdk/platform-tools:${PATH} # For android command
+# FIXME: Attempt to get maven to work with compiling apks via playn
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk
+# I found this using /usr/libexec/java_home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home
