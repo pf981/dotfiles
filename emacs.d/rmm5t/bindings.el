@@ -92,6 +92,10 @@
 (global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue
 
 ;; Tags
+;; Remove python-send-buffer C-c C-c hotkey
+(add-hook 'python-mode-hook
+          (lambda()
+            (local-unset-key (kbd "C-c C-c"))))
 (global-set-key (kbd "C-c c") 'uncomment-region) ; was tags-loop-continue
 (global-set-key (kbd "C-c C-c") 'comment-region)
 
