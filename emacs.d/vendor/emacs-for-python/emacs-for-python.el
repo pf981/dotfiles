@@ -10,4 +10,14 @@
 ;; (require 'epy-bindings)   ;; For my suggested keybindings [optional]
 ;; (require 'epy-nose)       ;; For nose integration
 
+;; Highlight indentation
+(require 'highlight-indentation)
+(add-hook 'python-mode-hook 'highlight-indentation)
+
+;; Disable auto-pairing of parenthesis
+(setq skeleton-pair nil)
+
+;; Configure flymake checker
+(epy-setup-checker "python3.4 -m pyflakes %f")
+
 (provide 'emacs-for-python)
