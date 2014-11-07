@@ -30,6 +30,7 @@
 (load "rmm5t/smoothscroll")
 (load "rmm5t/private" 'noerror)
 
+(load "rmm5t/screen-256color")
 ;; (load "rmm5t/hl-line")
 ;; (load "rmm5t/iswitchb")
 
