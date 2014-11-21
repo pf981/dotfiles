@@ -162,7 +162,7 @@ original" (interactive)
 ;; Other useful stuff
 
 ; delete seleted text when typing
-(delete-selection-mode 1)
+;; (delete-selection-mode 1)
 
 ;; highlight current line
 ;;(global-hl-line-mode 1)
