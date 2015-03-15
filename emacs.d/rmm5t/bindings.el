@@ -102,3 +102,13 @@
 ;; Scroll buffer by one line
 (global-set-key (kbd "M-p") 'scroll-down-line)
 (global-set-key (kbd "M-n") 'scroll-up-line)
+
+;; Fix Arrow Keys Not Working in Screen
+(define-key function-key-map "\eOA" [up])
+(define-key function-key-map "\e[A" [up])
+(define-key function-key-map "\eOB" [down])
+(define-key function-key-map "\e[B" [down])
+(define-key function-key-map "\eOC" [right])
+(define-key function-key-map "\e[C" [right])
+(define-key function-key-map "\eOD" [left])
+(define-key function-key-map "\e[D" [left])
