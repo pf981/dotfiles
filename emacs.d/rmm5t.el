@@ -69,6 +69,7 @@
 (vendor 'fixme-mode)
 (vendor 'cweb-mode 'cweb-mode) ;; FIXME: This doesn't work
 (vendor 'emacs-for-python)
+(vendor 'ess-site)
 
 
 ;;(setq auto-mode-alist (cons '("\\.w" . cweb-mode) auto-mode-alist)) ;; FIXME: Remove
